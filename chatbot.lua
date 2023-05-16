@@ -1,4 +1,4 @@
---// Chat Bot; 20% Functions 40% ChatGPT https://chat.openai.com
+--// Chat Bot; 20% Functions 80% ChatGPT https://chat.openai.com
 function sendMsg(msg)
   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg, "All")
 end
