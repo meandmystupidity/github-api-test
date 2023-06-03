@@ -393,6 +393,7 @@ Title_7.Text = '  Test'
 Title_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title_7.TextSize = 16.000
 Title_7.TextXAlignment = Enum.TextXAlignment.Left
+Title_7.Visible = false
 
 Titleuicorner_7.CornerRadius = UDim.new(0, 4)
 Titleuicorner_7.Name = 'Titleuicorner'
