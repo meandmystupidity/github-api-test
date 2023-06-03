@@ -147,7 +147,7 @@ Dropdown.Name = 'Dropdown'
 Dropdown.Parent = Templates
 
 Option.Name = 'Option'
-Option.Parent = Dropdown.Title
+Option.Parent = Dropdown:GetChildren()[1]
 Option.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 Option.BorderColor3 = Color3.fromRGB(40, 40, 40)
 Option.BorderSizePixel = 0
