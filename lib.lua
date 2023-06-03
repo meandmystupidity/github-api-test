@@ -391,7 +391,7 @@ Title_7.Size = UDim2.new(0, 421, 0, 34)
 Title_7.Font = Enum.Font.Gotham
 Title_7.Text = '  Test'
 Title_7.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title_7.TextSize = 16.000
+Title_7.TextSize = 14.000
 Title_7.TextXAlignment = Enum.TextXAlignment.Left
 Title_7.Visible = false
 
@@ -411,7 +411,7 @@ SelectedKey_7.Font = Enum.Font.RobotoMono
 SelectedKey_7.Text = '...'
 SelectedKey_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 SelectedKey_7.TextScaled = true
-SelectedKey_7.TextSize = 16.000
+SelectedKey_7.TextSize = 14.000
 SelectedKey_7.TextWrapped = true
 
 SelectedKeyuicorner_7.CornerRadius = UDim.new(0, 4)
