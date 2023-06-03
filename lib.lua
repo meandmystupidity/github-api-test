@@ -396,10 +396,10 @@ Title_7.TextXAlignment = Enum.TextXAlignment.Left
 
 Titleuicorner_7.CornerRadius = UDim.new(0, 4)
 Titleuicorner_7.Name = 'Titleuicorner'
-Titleuicorner_7.Parent = Title
+Titleuicorner_7.Parent = Title_7
 
 SelectedKey_7.Name = 'SelectedKey'
-SelectedKey_7.Parent = Title
+SelectedKey_7.Parent = Title_7
 SelectedKey_7.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 SelectedKey_7.BorderColor3 = Color3.fromRGB(40, 40, 40)
 SelectedKey_7.BorderSizePixel = 0
@@ -415,6 +415,6 @@ SelectedKey_7.TextWrapped = true
 
 SelectedKeyuicorner_7.CornerRadius = UDim.new(0, 4)
 SelectedKeyuicorner_7.Name = 'SelectedKeyuicorner'
-SelectedKeyuicorner_7.Parent = SelectedKey
+SelectedKeyuicorner_7.Parent = SelectedKey_7
 
 return DoggosHub
