@@ -42,6 +42,11 @@ local SectionHolder = Instance.new('Frame')
 local Title_4 = Instance.new('TextLabel')
 local TabsHolder = Instance.new('ScrollingFrame')
 local Tabsholderuilistlayout = Instance.new('UIListLayout')
+local Keybind = Instance.new('Folder')
+local Title_5 = Instance.new('TextLabel')
+local Titleuicorner_5 = Instance.new('UICorner')
+local SelectedKey = Instance.new('TextButton')
+local SelectedKeyuicorner = Instance.new('UICorner')
 
 DoggosHub.Name = 'DoggosHub'
 DoggosHub.Parent = game.Players.LocalPlayer:WaitForChild('PlayerGui')
@@ -373,5 +378,43 @@ Tabsholderuilistlayout.Parent = TabsHolder
 Tabsholderuilistlayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 Tabsholderuilistlayout.SortOrder = Enum.SortOrder.LayoutOrder
 Tabsholderuilistlayout.Padding = UDim.new(0, 6)
+
+Keybind.Name = 'Keybind'
+Keybind.Parent = Templates
+
+Title_5.Name = 'Title'
+Title_5.Parent = Keybind
+Title_5.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Title_5.BorderColor3 = Color3.fromRGB(60, 60, 60)
+Title_5.BorderSizePixel = 0
+Title_5.Size = UDim2.new(0, 421, 0, 34)
+Title_5.Font = Enum.Font.Gotham
+Title_5.Text = '  Test'
+Title_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_5.TextSize = 16.000
+Title_5.TextXAlignment = Enum.TextXAlignment.Left
+
+Titleuicorner_5.CornerRadius = UDim.new(0, 4)
+Titleuicorner_5.Name = 'Titleuicorner'
+Titleuicorner_5.Parent = Title
+
+SelectedKey.Name = 'SelectedKey'
+SelectedKey.Parent = Title
+SelectedKey.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+SelectedKey.BorderColor3 = Color3.fromRGB(40, 40, 40)
+SelectedKey.BorderSizePixel = 0
+SelectedKey.Position = UDim2.new(0.921615183, 0, 0.117647059, 0)
+SelectedKey.Size = UDim2.new(0, 26, 0, 26)
+SelectedKey.AutoButtonColor = false
+SelectedKey.Font = Enum.Font.RobotoMono
+SelectedKey.Text = '...'
+SelectedKey.TextColor3 = Color3.fromRGB(255, 255, 255)
+SelectedKey.TextScaled = true
+SelectedKey.TextSize = 16.000
+SelectedKey.TextWrapped = true
+
+SelectedKeyuicorner.CornerRadius = UDim.new(0, 4)
+SelectedKeyuicorner.Name = 'SelectedKeyuicorner'
+SelectedKeyuicorner.Parent = SelectedKey
 
 return DoggosHub
