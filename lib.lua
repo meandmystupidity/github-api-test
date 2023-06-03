@@ -41,7 +41,7 @@ local Section = Instance.new('Folder')
 local SectionHolder = Instance.new('Frame')
 local Title_4 = Instance.new('TextLabel')
 local TabsHolder = Instance.new('ScrollingFrame')
-local ButtonsHolderuilistlayout_2 = Instance.new('UIListLayout')
+local Tabsholderuilistlayout = Instance.new('UIListLayout')
 
 DoggosHub.Name = 'DoggosHub'
 DoggosHub.Parent = game.Players.LocalPlayer:WaitForChild('PlayerGui')
@@ -368,10 +368,10 @@ TabsHolder.BottomImage = ''
 TabsHolder.ScrollBarThickness = 2
 TabsHolder.TopImage = ''
 
-ButtonsHolderuilistlayout_2.Name = 'ButtonsHolderuilistlayout'
-ButtonsHolderuilistlayout_2.Parent = TabsHolder
-ButtonsHolderuilistlayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
-ButtonsHolderuilistlayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-ButtonsHolderuilistlayout_2.Padding = UDim.new(0, 6)
+Tabsholderuilistlayout.Name = 'ButtonsHolderuilistlayout'
+Tabsholderuilistlayout.Parent = TabsHolder
+Tabsholderuilistlayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+Tabsholderuilistlayout.SortOrder = Enum.SortOrder.LayoutOrder
+Tabsholderuilistlayout.Padding = UDim.new(0, 6)
 
 return DoggosHub
