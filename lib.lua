@@ -357,7 +357,7 @@ Title_4.TextSize = 12.000
 Title_4.TextXAlignment = Enum.TextXAlignment.Left
 
 TabsHolder.Name = 'TabsHolder'
-TabsHolder.Parent = Background
+TabsHolder.Parent = Frames
 TabsHolder.Active = true
 TabsHolder.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
 TabsHolder.BorderColor3 = Color3.fromRGB(16, 16, 16)
