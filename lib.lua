@@ -345,7 +345,7 @@ SectionHolder.BackgroundTransparency = 1.000
 SectionHolder.BorderColor3 = Color3.fromRGB(60, 60, 60)
 SectionHolder.BorderSizePixel = 0
 SectionHolder.Position = UDim2.new(0.384259254, 0, 0, 0)
-SectionHolder.Size = UDim2.new(0, 104, 0, 6)
+SectionHolder.Size = UDim2.new(0, 104, 0, 12)
 SectionHolder.Visible = false
 
 Title_4.Name = 'Title'
@@ -355,7 +355,7 @@ Title_4.BackgroundTransparency = 1.000
 Title_4.BorderColor3 = Color3.fromRGB(60, 60, 60)
 Title_4.BorderSizePixel = 0
 Title_4.Position = UDim2.new(-1.57692313, 0, 0, 0)
-Title_4.Size = UDim2.new(0, 143, 0, 17)
+Title_4.Size = UDim2.new(0, 133, 0, 17)
 Title_4.Font = Enum.Font.GothamBold
 Title_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title_4.TextSize = 12.000
