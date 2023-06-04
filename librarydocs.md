@@ -29,7 +29,7 @@ What do i need to replace?
 
 To add an Element, you need a Tab; see above.
 
-###### Buttons
+#### Buttons
 
 ```lua
   newTab:AddButton({
