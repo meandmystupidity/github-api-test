@@ -57,6 +57,14 @@ local Slider_2 = Instance.new('Frame')
 local Sliderbackgrounduicorner_2 = Instance.new('UICorner')
 local Title_9 = Instance.new('TextLabel')
 local Drag = Instance.new('Frame')
+local TextBox = Instance.new('Folder')
+local Title_6 = Instance.new('TextLabel')
+local Titleuicorner_6 = Instance.new('UICorner')
+local TextHolder = Instance.new('Frame')
+local TextEnter = Instance.new('TextBox')
+local TextEnteruicorner = Instance.new('UICorner')
+local TextHolderuicorner = Instance.new('UICorner')
+local IconLabel_6 = Instance.new('ImageLabel')
 
 DoggosHub.Name = 'DoggosHub'
 DoggosHub.Parent = game.Players.LocalPlayer:WaitForChild('PlayerGui')
@@ -503,5 +511,66 @@ Title_9.Text = '10 Bananas'
 Title_9.TextColor3 = Color3.fromRGB(155, 155, 155)
 Title_9.TextSize = 12.000
 Title_9.TextXAlignment = Enum.TextXAlignment.Left
+
+TextBox.Name = 'TextBox'
+TextBox.Parent = Templates
+
+Title_6.Name = 'Title_6'
+Title_6.Parent = TextBox
+Title_6.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Title_6.BorderColor3 = Color3.fromRGB(60, 60, 60)
+Title_6.BorderSizePixel = 0
+Title_6.Size = UDim2.new(0, 421, 0, 34)
+Title_6.Font = Enum.Font.Gotham
+Title_6.Text = '  Test'
+Title_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_6.TextSize = 16.000
+Title_6.TextXAlignment = Enum.TextXAlignment.Left
+
+Titleuicorner_6.CornerRadius = UDim.new(0, 4)
+Titleuicorner_6.Name = 'Title_6_6uicorner'
+Titleuicorner_6.Parent = Title_6
+
+TextHolder.Name = 'TextHolder'
+TextHolder.Parent = Title_6
+TextHolder.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextHolder.BorderColor3 = Color3.fromRGB(40, 40, 40)
+TextHolder.BorderSizePixel = 0
+TextHolder.Position = UDim2.new(0.520372927, 0, 0.205411762, 0)
+TextHolder.Size = UDim2.new(0, 165, 0, 20)
+
+TextEnter.Name = 'TextEnter'
+TextEnter.Parent = TextHolder
+TextEnter.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+TextEnter.BorderColor3 = Color3.fromRGB(40, 40, 40)
+TextEnter.BorderSizePixel = 0
+TextEnter.Position = UDim2.new(0.0424242392, 0, 0, 0)
+TextEnter.Size = UDim2.new(0, 150, 0, 20)
+TextEnter.Font = Enum.Font.Gotham
+TextEnter.PlaceholderColor3 = Color3.fromRGB(255, 255, 525)
+TextEnter.PlaceholderText = 'Test'
+TextEnter.Text = ''
+TextEnter.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextEnter.TextSize = 14.000
+TextEnter.TextWrapped = true
+TextEnter.TextXAlignment = Enum.TextXAlignment.Left
+
+TextEnteruicorner.CornerRadius = UDim.new(0, 4)
+TextEnteruicorner.Name = 'TextEnteruicorner'
+TextEnteruicorner.Parent = TextEnter
+
+TextHolderuicorner.CornerRadius = UDim.new(0, 4)
+TextHolderuicorner.Name = 'TextHolderuicorner'
+TextHolderuicorner.Parent = TextHolder
+
+IconLabel_6.Name = 'IconLabel'
+IconLabel_6.Parent = TextHolder
+IconLabel_6.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+IconLabel_6.BackgroundTransparency = 1.000
+IconLabel_6.BorderColor3 = Color3.fromRGB(60, 60, 60)
+IconLabel_6.BorderSizePixel = 0
+IconLabel_6.Position = UDim2.new(1.05721223, 0, -0.0440000035, 0)
+IconLabel_6.Size = UDim2.new(0, 20, 0, 20)
+IconLabel_6.Image = 'rbxassetid://8997388195'
 
 return DoggosHub
