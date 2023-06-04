@@ -2,22 +2,6 @@ local module = {}
 if (game.Players.LocalPlayer.PlayerGui:FindFirstChild('DoggosHub') ~= nil) then
 	game.Players.LocalPlayer.PlayerGui.DoggosHub:Destroy()
 end
-if (readfile) and (isfolder) and (writefile) and (makefolder) then
-	local contents = readfile('DoggosHub/library.lua')
-	if (contents == nil) then
-		if (isfolder('DoggosHub') == false) then
-			makefolder('DoggosHub')
-			writefile('DoggosHub/library.lua', game:HttpGet('https://raw.githubusercontent.com/meandmystupidity/robloxgamefunctions/main/doggoslib.lua'))
-			print('Updated Library!')
-		else
-			writefile('DoggosHub/library.lua', game:HttpGet('https://raw.githubusercontent.com/meandmystupidity/robloxgamefunctions/main/doggoslib.lua'))
-			print('Updated Library!')
-		end
-	else
-		writefile('DoggosHub/library.lua', game:HttpGet('https://raw.githubusercontent.com/meandmystupidity/robloxgamefunctions/main/doggoslib.lua'))
-		print('Updated Library!')
-	end
-end
 local Lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/meandmystupidity/robloxgamefunctions/main/lib.lua')))()
 local dragging = false
 local dragInput, mousePos, framePos
