@@ -515,7 +515,7 @@ Title_9.TextXAlignment = Enum.TextXAlignment.Left
 TextBox.Name = 'TextBox'
 TextBox.Parent = Templates
 
-Title_6.Name = 'Title_6'
+Title_6.Name = 'Title'
 Title_6.Parent = TextBox
 Title_6.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 Title_6.BorderColor3 = Color3.fromRGB(60, 60, 60)
