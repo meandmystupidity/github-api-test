@@ -191,31 +191,31 @@ function module:AddTab(name)
 		local enabled = false
 		newToggle.MouseButton1Click:Connect(function()
 			if (newToggle.ToggleBackground.Toggle.BackgroundColor3 == Color3.fromRGB(170, 0, 0)) then
-				TS:Create(newToggle.ToggleBackground.Toggle, Info, {BackgroundColor3 = Color3.fromRGB(0, 85, 0), Position = UDim2.new(0.49, 0, 0.017, 0)}):Play() --// Position = UDim2.new(0.49, 0, 0.017, 0), 
+				TS:Create(newToggle.ToggleBackground.Toggle, Info, {BackgroundColor3 = Color3.fromRGB(0, 85, 0), Position = UDim2.new(0.49, 0, 0.020, 0)}):Play() --// Position = UDim2.new(0.49, 0, 0.017, 0), 
 				enabled = true
 			else
-				TS:Create(newToggle.ToggleBackground.Toggle, Info, {BackgroundColor3 = Color3.fromRGB(170, 0, 0), Position = UDim2.new(-0.01, 0, 0.017, 0)}):Play() --// Position = UDim2.new(-0.01, 0, 0.017, 0), 
+				TS:Create(newToggle.ToggleBackground.Toggle, Info, {BackgroundColor3 = Color3.fromRGB(170, 0, 0), Position = UDim2.new(-0.01, 0, 0.020, 0)}):Play() --// Position = UDim2.new(-0.01, 0, 0.017, 0), 
 				enabled = false
 			end
 			pcall(config.Callback, enabled)
 		end)
 		newToggle.ToggleBackground.Toggle.MouseButton1Click:Connect(function()
 			if (newToggle.ToggleBackground.Toggle.BackgroundColor3 == Color3.fromRGB(170, 0, 0)) then
-				TS:Create(newToggle.ToggleBackground.Toggle, Info, {BackgroundColor3 = Color3.fromRGB(0, 85, 0), Position = UDim2.new(0.49, 0, 0.017, 0)}):Play() --// Position = UDim2.new(0.49, 0, 0.017, 0), 
+				TS:Create(newToggle.ToggleBackground.Toggle, Info, {BackgroundColor3 = Color3.fromRGB(0, 85, 0), Position = UDim2.new(0.49, 0, 0.020, 0)}):Play() --// Position = UDim2.new(0.49, 0, 0.017, 0), 
 				enabled = true
 			else
-				TS:Create(newToggle.ToggleBackground.Toggle, Info, {BackgroundColor3 = Color3.fromRGB(170, 0, 0), Position = UDim2.new(-0.01, 0, 0.017, 0)}):Play() --// Position = UDim2.new(-0.01, 0, 0.017, 0), 
+				TS:Create(newToggle.ToggleBackground.Toggle, Info, {BackgroundColor3 = Color3.fromRGB(170, 0, 0), Position = UDim2.new(-0.01, 0, 0.020, 0)}):Play() --// Position = UDim2.new(-0.01, 0, 0.017, 0), 
 				enabled = false
 			end
 			pcall(config.Callback, enabled)
 		end)
 		function actions:Set(state)
 			if (state == true) then
-				TS:Create(newToggle.ToggleBackground.Toggle, Info, {BackgroundColor3 = Color3.fromRGB(0, 85, 0), Position = UDim2.new(0.49, 0, 0.017, 0)}):Play()
+				TS:Create(newToggle.ToggleBackground.Toggle, Info, {BackgroundColor3 = Color3.fromRGB(0, 85, 0), Position = UDim2.new(0.49, 0, 0.020, 0)}):Play()
 				enabled = true
 				pcall(config.Callback, enabled)
 			else
-				TS:Create(newToggle.ToggleBackground.Toggle, Info, {BackgroundColor3 = Color3.fromRGB(170, 0, 0), Position = UDim2.new(-0.01, 0, 0.017, 0)}):Play()
+				TS:Create(newToggle.ToggleBackground.Toggle, Info, {BackgroundColor3 = Color3.fromRGB(170, 0, 0), Position = UDim2.new(-0.01, 0, 0.020, 0)}):Play()
 				enabled = false
 				pcall(config.Callback, enabled)
 			end
