@@ -376,7 +376,7 @@ function module:AddTab(name)
 		local newSlider = Slider:Clone()
 		newSlider.Parent = TabsHolder
 		newSlider.Name = name
-		newSlider.Title.Text = config.Text
+		newSlider.Title.Text = '  ' .. config.Text
 		local SliderBar = newSlider.SliderBackground
 		local UserInputService = game:GetService('UserInputService')
 		local SliderConfig = {
