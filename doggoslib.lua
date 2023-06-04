@@ -473,6 +473,7 @@ function module:AddTab(name)
 			while task.wait(1) do
 				if (doClock == true) then
 					Clock.Text = os.date('%X') .. ' ' .. os.date('%d') .. '.' .. os.date('%m') .. '.' .. os.date('%Y')
+					pcall(config.Callback, Clock.Text)
 				end
 			end
 		end)
