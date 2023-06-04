@@ -5,7 +5,7 @@ end
 local Lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/meandmystupidity/robloxgamefunctions/main/lib.lua')))()
 local dragging = false
 local dragInput, mousePos, framePos
-local Drag = Lib.Background:WaitForChild('Drag')
+local Drag = Lib.Background:FindFirstChild('Drag')
 Drag.InputBegan:Connect(function(input)
 if input.UserInputType == Enum.UserInputType.MouseButton1 then
     dragging = true
