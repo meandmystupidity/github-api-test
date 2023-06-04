@@ -244,22 +244,60 @@ function module:AddTab(name)
 		newDropdown.Text = '  ' .. config.Text
 		newDropdown.Parent = TabsHolder
 		newDropdown.OptionsHolder.Visible = false
+		local Frame = Instance.new('Frame')
+		Frame.Parent = TabsHolder
+		Frame.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+		Frame.BackgroundTransparency = 1.000
+		Frame.BorderColor3 = Color3.fromRGB(60, 60, 60)
+		Frame.BorderSizePixel = 0
+		Frame.Position = UDim2.new(0.384259254, 0, 0.387096763, 0)
+		Frame.Size = UDim2.new(0, 100, 0, 169)
+		Frame.Visible = false
+		local sizes = {
+			open = UDim2.new(0, 100, 0, 169),
+			closed = UDim2.new(0, 100, 0, 0)
+		}
+		Frame.Size = sizes.closed
+		function ToggleFrame()
+			if (newDropdown.OptionsHolder.Visible == true) then
+				for _, child in pairs(newDropdown.OptionsHolder:GetChildren()) do
+					if (child.ClassName == 'TextButton') then
+						child.Visible = false
+					end
+				end
+				newDropdown.OptionsHolder:TweenSize(UDim2.new(sizes.closed), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.2)
+				Frame:TweenSize(UDim2.new(sizes.closed), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.2)
+				task.wait(0.2)
+				Frame.Visible = false
+				newDropdown.OptionsHolder.Visible = false
+			else
+				for _, child in pairs(newDropdown.OptionsHolder:GetChildren()) do
+					if (child.ClassName == 'TextButton') then
+						child.Visible = true
+					end
+				end
+				newDropdown.OptinosHolder.Visible = true
+				Frame.Visible = true
+				Frame:TweenSize(UDim2.new(sizes.open), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.2)
+				newDropdown.OptionsHolder:TweenSize(UDim2.new(sizes.open), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.2)
+			end
+		end
 		local UIS = game:GetService('UserInputService')
 		UIS.InputBegan:Connect(function(input, gpe)
 			if (input.UserInputType == Enum.UserInputType.MouseButton1) then
 				if (newDropdown:FindFirstChild('OptionsHolder') ~= nil) then
 					if (newDropdown.OptionsHolder.Visible == true) then
 						task.wait(0.2)
-						newDropdown.OptionsHolder.Visible = false
+						ToggleFrame()
 					end
 				end
 			end
 		end)
 		newDropdown.DropdownButton.MouseButton1Click:Connect(function()
-			newDropdown.OptionsHolder.Visible = not newDropdown.OptionsHolder.Visible
+			ToggleFrame()
 		end)
 		newDropdown.SelectedOption.MouseButton1Click:Connect(function()
-			newDropdown.OptionsHolder.Visible = not newDropdown.OptionsHolder.Visible
+			ToggleFrame()
 		end)
 		newDropdown.SelectedOption.Text = config.Options[1]
 		for _, option in pairs(config.Options) do
@@ -270,6 +308,7 @@ function module:AddTab(name)
 			optionButton.Visible = true
 			optionButton.MouseButton1Click:Connect(function()
 				newDropdown.SelectedOption.Text = option
+				ToggleFrame()
 				pcall(config.Callback, option)
 			end)
 		end
