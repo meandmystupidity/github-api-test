@@ -6,7 +6,7 @@ local Lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/meandmys
 local isInFrame = false
 local dragging = false
 local dragInput, mousePos, framePos
-local Drag = Lib.Background:FindFirstChild('Drag')
+local Drag = Lib:FindFirstChild('Drag')
 Drag.MouseEnter:Connect(function()
 	isInFrame = true
 end)
