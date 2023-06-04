@@ -11,7 +11,7 @@ Drag.MouseEnter:Connect(function()
 	isInFrame = true
 end)
 Drag.MouseLeave:Connect(function()
-	isInFrame = true
+	isInFrame = false
 end)
 game:GetService('UserInputService').InputBegan:Connect(function(input)
 if input.UserInputType == Enum.UserInputType.MouseButton1 then
