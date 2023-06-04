@@ -142,6 +142,7 @@ function module:AddTab(name)
 	end)
 	local Elements = {}
 	function Elements:AddButton(config)
+		local actions = {}
 		config.Text = config.Text or 'Could not create Text: config.Text missing.'
 		callback = config.Callback or function() end
 		local newButton = Button:Clone()
@@ -170,13 +171,22 @@ function module:AddTab(name)
 				end
 			end
 		end)
+		function actions:NewText(newText)
+			newText = newText or tostring(math.random(1000, 9000)) .. 'error'
+			newButton.Text = newText
+		end
 	end
 	function Elements:AddSection(config)
+		local actions = {}
 		config.Name = config.Name or tostring(math.random(1000, 9000)) .. 'error'
 		local newSection = Section:Clone()
 		newSection.Name = name
 		newSection.Title.Text = '  ' .. config.Name
 		newSection.Parent = TabsHolder
+		function actions:NewText(newText)
+			newText = newText or tostring(math.random(1000, 9000)) .. 'error'
+			newSection.Title.Text = newText
+		end
 	end
 	function Elements:AddToggle(config)
 		local actions = {}
@@ -219,6 +229,10 @@ function module:AddTab(name)
 				enabled = false
 				pcall(config.Callback, enabled)
 			end
+		end
+		function actions:NewText(newText)
+			newText = newText or tostring(math.random(1000, 9000)) .. 'error'
+			newToggle.Text = newText
 		end
 		return actions
 	end
@@ -290,6 +304,10 @@ function module:AddTab(name)
 				end)
 			end
 		end
+		function actions:NewText(newText)
+			newText = newText or tostring(math.random(1000, 9000)) .. 'error'
+			newDropdown.Text = newText
+		end
 		return actions
 	end
 	function Elements:AddBind(config)
@@ -341,6 +359,10 @@ function module:AddTab(name)
 			if (newKeybind:FindFirstChild('SelectedKey')) then
 				newKeybind.SelectedKey.Text = getKey(config.Keybind)
 			end
+		end
+		function actions:NewText(newText)
+			newText = newText or tostring(math.random(1000, 9000)) .. 'error'
+			newKeybind.Text = newText
 		end
 		return actions
 	end
@@ -400,7 +422,10 @@ function module:AddTab(name)
 				pcall(config.Callback, self.Value)
 			end
 		end
-		Slider:Set(10)
+		function Slider:NewText(newText)
+			newText = newText or tostring(math.random(1000, 9000)) .. 'error'
+			newSlider.Title.Text = newText
+		end
 		return Slider
 	end
 	function Elements:AddClock(config)
