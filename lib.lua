@@ -524,7 +524,7 @@ Title_6.Size = UDim2.new(0, 421, 0, 34)
 Title_6.Font = Enum.Font.Gotham
 Title_6.Text = '  Test'
 Title_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title_6.TextSize = 16.000
+Title_6.TextSize = 14.000
 Title_6.TextXAlignment = Enum.TextXAlignment.Left
 Title_6.Visible = false
 
