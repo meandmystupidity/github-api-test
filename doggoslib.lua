@@ -2,6 +2,22 @@ local module = {}
 if (game.Players.LocalPlayer.PlayerGui:FindFirstChild('DoggosHub') ~= nil) then
 	game.Players.LocalPlayer.PlayerGui.DoggosHub:Destroy()
 end
+if (readfile) and (isfolder) and (writefile) and (makefolder) then
+	local contents = readfile('DoggosHub/library.lua')
+	if (contents == nil) then
+		if (isfolder('DoggosHub') == false) then
+			makefolder('DoggosHub')
+			writefile('DoggosHub/library.lua', game:HttpGet('https://raw.githubusercontent.com/meandmystupidity/robloxgamefunctions/main/doggoslib.lua'))
+			print('Updated Library!')
+		else
+			writefile('DoggosHub/library.lua', game:HttpGet('https://raw.githubusercontent.com/meandmystupidity/robloxgamefunctions/main/doggoslib.lua'))
+			print('Updated Library!')
+		end
+	else
+		writefile('DoggosHub/library.lua', game:HttpGet('https://raw.githubusercontent.com/meandmystupidity/robloxgamefunctions/main/doggoslib.lua'))
+		print('Updated Library!')
+	end
+end
 local Lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/meandmystupidity/robloxgamefunctions/main/lib.lua')))()
 local dragging = false
 local dragInput, mousePos, framePos
@@ -25,7 +41,7 @@ game:GetService('UserInputService').InputChanged:Connect(function(input)
 	end
 end)
 
-input.InputChanged:Connect(function(input)
+game:GetService('UserInputService').InputChanged:Connect(function(input)
 	if input == dragInput and dragging then
 	    local delta = input.Position - mousePos
 	    Lib.Background.Position  = UDim2.new(framePos.X.Scale, framePos.X.Offset + delta.X, framePos.Y.Scale, framePos.Y.Offset + delta.Y)
@@ -33,6 +49,8 @@ input.InputChanged:Connect(function(input)
 end)
 local Background = Lib.Background
 Background.Visible = true
+Background.Active = true
+Background.Draggable = true
 local Templates = Background.Templates
 local Dropdown = Templates.Dropdown.Title
 local Button = Templates.Button.ButtonTemplate
