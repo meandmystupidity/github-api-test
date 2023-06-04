@@ -20,7 +20,7 @@ if input.UserInputType == Enum.UserInputType.MouseButton1 then
 end
 end)
 
-Lib.Background.InputChanged:Connect(function(input)
+game:GetService('UserInputService').InputChanged:Connect(function(input)
 	if input.UserInputType == Enum.UserInputType.MouseMovement then
 		dragInput = input
 	end
