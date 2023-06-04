@@ -58,7 +58,7 @@ local Section = Templates.Section.SectionHolder
 local Keybind = Templates.Keybind.Title
 local Slider = Templates.Slider.SliderTemplate
 local TextBox = Templates.TextBox.Title
-TextBox.Visible = false
+print(TextBox.Text)
 local Clock
 local TabsHolder = Background.Headers.Tabs.Frames.TabsHolder
 local TabsButtonHolder = Background.Headers.Tabs.Buttons.ButtonsHolder
