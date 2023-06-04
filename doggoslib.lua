@@ -3,10 +3,17 @@ if (game.Players.LocalPlayer.PlayerGui:FindFirstChild('DoggosHub') ~= nil) then
 	game.Players.LocalPlayer.PlayerGui.DoggosHub:Destroy()
 end
 local Lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/meandmystupidity/robloxgamefunctions/main/lib.lua')))()
+local isInFrame = false
 local dragging = false
 local dragInput, mousePos, framePos
 local Drag = Lib.Background:FindFirstChild('Drag')
-Drag.InputBegan:Connect(function(input)
+Drag.MouseEnter:Connect(function()
+	isInFrame = true
+end)
+Drag.MouseLeave:Connect(function()
+	isInFrame = true
+end)
+game:GetService('UserInputService').InputBegan:Connect(function(input)
 if input.UserInputType == Enum.UserInputType.MouseButton1 then
     dragging = true
     mousePos = input.Position
@@ -27,7 +34,7 @@ game:GetService('UserInputService').InputChanged:Connect(function(input)
 end)
 
 game:GetService('UserInputService').InputChanged:Connect(function(input)
-	if input == dragInput and dragging then
+	if input == dragInput and dragging and isInFrame then
 	    local delta = input.Position - mousePos
 	    Lib.Background.Position  = UDim2.new(framePos.X.Scale, framePos.X.Offset + delta.X, framePos.Y.Scale, framePos.Y.Offset + delta.Y)
 	end
