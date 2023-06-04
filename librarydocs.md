@@ -5,8 +5,8 @@
 !! I recommend using another Library since this does not look too good !!
 
 Example Librarys:
-  [Orion](https://github.com/shlexware/Orion/blob/main/Documentation.md)
-  [Kavo](https://xheptcofficial.gitbook.io/kavo-library/)
+  **[Orion](https://github.com/shlexware/Orion/blob/main/Documentation.md)**
+  **[Kavo](https://xheptcofficial.gitbook.io/kavo-library/)**
 
 ```lua
 local DoggosLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/meandmystupidity/robloxgamefunctions/main/doggoslib.lua'))()
