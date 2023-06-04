@@ -476,8 +476,7 @@ function module:AddTab(name)
 		local newTextBox = TextBox:Clone()
 		newTextBox.Name = name
 		newTextBox.Parent = TabsHolder
-		newTextBox.Visible = false
-		newTextbox.Text = '  ' .. config.Text
+		newTextBox.Text = '  ' .. config.Text
 		newTextBox.TextHolder.TextEnter.FocusLost:Connect(function()
 			pcall(config.Callback, newTextBox.TextHolder.TextEnter.Text)
 			if (config.DeleteText == true) then
