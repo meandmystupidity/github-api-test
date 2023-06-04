@@ -276,7 +276,7 @@ function module:AddTab(name)
 						child.Visible = true
 					end
 				end
-				newDropdown.OptinosHolder.Visible = true
+				newDropdown.OptionsHolder.Visible = true
 				Frame.Visible = true
 				Frame:TweenSize(UDim2.new(sizes.open), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.2)
 				newDropdown.OptionsHolder:TweenSize(UDim2.new(sizes.open), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.2)
