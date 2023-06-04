@@ -56,6 +56,7 @@ local Sliderbackgrounduicorner = Instance.new('UICorner')
 local Slider_2 = Instance.new('Frame')
 local Sliderbackgrounduicorner_2 = Instance.new('UICorner')
 local Title_9 = Instance.new('TextLabel')
+local Drag = Instance.new('Frame')
 
 DoggosHub.Name = 'DoggosHub'
 DoggosHub.Parent = game.Players.LocalPlayer:WaitForChild('PlayerGui')
@@ -68,6 +69,15 @@ Background.BorderColor3 = Color3.fromRGB(16, 16, 16)
 Background.BorderSizePixel = 0
 Background.Position = UDim2.new(0.159646749, 0, 0.20198676, 0)
 Background.Size = UDim2.new(0, 600, 0, 359)
+
+Drag.Name = 'Drag'
+Drag.Parent = Background
+Drag.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Drag.BackgroundTransparency = 1.000
+Drag.BorderColor3 = Color3.fromRGB(60, 60, 60)
+Drag.BorderSizePixel = 0
+Drag.Position = UDim2.new(0.00166666671, 0, 0, 0)
+Drag.Size = UDim2.new(0, 595, 0, 32)
 
 Backgrounduicorner.CornerRadius = UDim.new(0, 9)
 Backgrounduicorner.Name = 'Backgrounduicorner'
