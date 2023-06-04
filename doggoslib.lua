@@ -265,8 +265,8 @@ function module:AddTab(name)
 						child.Visible = false
 					end
 				end
-				newDropdown.OptionsHolder:TweenSize(UDim2.new(sizes.closed), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.2)
-				Frame:TweenSize(UDim2.new(sizes.closed), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.2)
+				newDropdown.OptionsHolder:TweenSize(UDim2.new(0, 100, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.2)
+				Frame:TweenSize(UDim2.new(0, 100, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.2)
 				task.wait(0.2)
 				Frame.Visible = false
 				newDropdown.OptionsHolder.Visible = false
@@ -278,8 +278,8 @@ function module:AddTab(name)
 				end
 				newDropdown.OptionsHolder.Visible = true
 				Frame.Visible = true
-				Frame:TweenSize(UDim2.new(sizes.open), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.2)
-				newDropdown.OptionsHolder:TweenSize(UDim2.new(sizes.open), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.2)
+				Frame:TweenSize(UDim2.new(0, 100, 0, 169), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.2)
+				newDropdown.OptionsHolder:TweenSize(UDim2.new(0, 100, 0, 169), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.2)
 			end
 		end
 		local UIS = game:GetService('UserInputService')
