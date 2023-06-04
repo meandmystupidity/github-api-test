@@ -171,7 +171,7 @@ function module:AddTab(name)
 		end)
 		function actions:NewText(newText)
 			newText = newText or tostring(math.random(1000, 9000)) .. 'error'
-			newButton.Text = newText
+			newButton.Text = '  ' .. newText
 		end
 	end
 	function Elements:AddSection(config)
@@ -183,7 +183,7 @@ function module:AddTab(name)
 		newSection.Parent = TabsHolder
 		function actions:NewText(newText)
 			newText = newText or tostring(math.random(1000, 9000)) .. 'error'
-			newSection.Title.Text = newText
+			newSection.Title.Text = '  ' .. newText
 		end
 	end
 	function Elements:AddToggle(config)
@@ -230,7 +230,7 @@ function module:AddTab(name)
 		end
 		function actions:NewText(newText)
 			newText = newText or tostring(math.random(1000, 9000)) .. 'error'
-			newToggle.Text = newText
+			newToggle.Text = '  ' .. newText
 		end
 		return actions
 	end
@@ -304,7 +304,7 @@ function module:AddTab(name)
 		end
 		function actions:NewText(newText)
 			newText = newText or tostring(math.random(1000, 9000)) .. 'error'
-			newDropdown.Text = newText
+			newDropdown.Text = '  ' .. newText
 		end
 		return actions
 	end
@@ -360,7 +360,7 @@ function module:AddTab(name)
 		end
 		function actions:NewText(newText)
 			newText = newText or tostring(math.random(1000, 9000)) .. 'error'
-			newKeybind.Text = newText
+			newKeybind.Text = '  ' .. newText
 		end
 		return actions
 	end
@@ -422,7 +422,7 @@ function module:AddTab(name)
 		end
 		function Slider:NewText(newText)
 			newText = newText or tostring(math.random(1000, 9000)) .. 'error'
-			newSlider.Title.Text = newText
+			newSlider.Title.Text = '  ' .. newText
 		end
 		return Slider
 	end
