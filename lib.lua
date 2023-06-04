@@ -76,8 +76,8 @@ Drag.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 Drag.BackgroundTransparency = 1.000
 Drag.BorderColor3 = Color3.fromRGB(60, 60, 60)
 Drag.BorderSizePixel = 0
-Drag.Position = UDim2.new(0.165, 0, 0.207, 0)
-Drag.Size = UDim2.new(0, 595, 0, 32)
+Drag.Position = UDim2.new(0.169, 0, 0.283, 0)
+Drag.Size = UDim2.new(0, 582, 0, 307)
 
 Backgrounduicorner.CornerRadius = UDim.new(0, 9)
 Backgrounduicorner.Name = 'Backgrounduicorner'
