@@ -47,6 +47,15 @@ local Title_7 = Instance.new('TextLabel')
 local Titleuicorner_7 = Instance.new('UICorner')
 local SelectedKey_7 = Instance.new('TextButton')
 local SelectedKeyuicorner_7 = Instance.new('UICorner')
+local Slider = Instance.new('Folder')
+local SliderTemplate = Instance.new('Frame')
+local SliderTemplateuicorner = Instance.new('UICorner')
+local Title_8 = Instance.new('TextLabel')
+local SliderBackground = Instance.new('Frame')
+local Sliderbackgrounduicorner = Instance.new('UICorner')
+local Slider_2 = Instance.new('Frame')
+local Sliderbackgrounduicorner_2 = Instance.new('UICorner')
+local Title_9 = Instance.new('TextLabel')
 
 DoggosHub.Name = 'DoggosHub'
 DoggosHub.Parent = game.Players.LocalPlayer:WaitForChild('PlayerGui')
@@ -417,5 +426,72 @@ SelectedKey_7.TextWrapped = true
 SelectedKeyuicorner_7.CornerRadius = UDim.new(0, 4)
 SelectedKeyuicorner_7.Name = 'SelectedKeyuicorner'
 SelectedKeyuicorner_7.Parent = SelectedKey_7
+
+Slider.Name = 'Slider'
+Slider.Parent = Templates
+
+SliderTemplate.Name = 'SliderTemplate'
+SliderTemplate.Parent = Slider
+SliderTemplate.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+SliderTemplate.BorderColor3 = Color3.fromRGB(60, 60, 60)
+SliderTemplate.BorderSizePixel = 0
+SliderTemplate.Position = UDim2.new(0.0127314813, 0, 0.129032254, 0)
+SliderTemplate.Size = UDim2.new(0, 421, 0, 47)
+SliderTemplate.Visible = false
+
+SliderTemplateuicorner.CornerRadius = UDim.new(0, 4)
+SliderTemplateuicorner.Name = 'SliderTemplateuicorner'
+SliderTemplateuicorner.Parent = SliderTemplate
+
+Title_8.Name = 'Title'
+Title_8.Parent = SliderTemplate
+Title_8.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Title_8.BackgroundTransparency = 1.000
+Title_8.BorderColor3 = Color3.fromRGB(60, 60, 60)
+Title_8.BorderSizePixel = 0
+Title_8.Position = UDim2.new(0, 0, 0.107692309, 0)
+Title_8.Size = UDim2.new(0, 419, 0, 16)
+Title_8.Font = Enum.Font.Gotham
+Title_8.Text = '  Set WalkSpeed'
+Title_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_8.TextSize = 14.000
+Title_8.TextXAlignment = Enum.TextXAlignment.Left
+
+SliderBackground.Name = 'SliderBackground'
+SliderBackground.Parent = SliderTemplate
+SliderBackground.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+SliderBackground.BorderColor3 = Color3.fromRGB(40, 40, 40)
+SliderBackground.BorderSizePixel = 0
+SliderBackground.Position = UDim2.new(0.00924627762, 0, 0.592144012, 0)
+SliderBackground.Size = UDim2.new(0, 410, 0, 13)
+
+Sliderbackgrounduicorner.CornerRadius = UDim.new(0, 16)
+Sliderbackgrounduicorner.Name = 'Sliderbackgrounduicorner'
+Sliderbackgrounduicorner.Parent = SliderBackground
+
+Slider_2.Name = 'Slider'
+Slider_2.Parent = SliderBackground
+Slider_2.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
+Slider_2.BorderColor3 = Color3.fromRGB(49, 49, 49)
+Slider_2.BorderSizePixel = 0
+Slider_2.Size = UDim2.new(0, 24, 0, 13)
+
+Sliderbackgrounduicorner_2.CornerRadius = UDim.new(0, 16)
+Sliderbackgrounduicorner_2.Name = 'Sliderbackgrounduicorner'
+Sliderbackgrounduicorner_2.Parent = Slider_2
+
+Title_9.Name = 'Title'
+Title_9.Parent = SliderBackground
+Title_9.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+Title_9.BackgroundTransparency = 1.000
+Title_9.BorderColor3 = Color3.fromRGB(60, 60, 60)
+Title_9.BorderSizePixel = 0
+Title_9.Position = UDim2.new(0.0146341771, 0, 0.153844967, 0)
+Title_9.Size = UDim2.new(0, 69, 0, 9)
+Title_9.Font = Enum.Font.Arial
+Title_9.Text = '10 Bananas'
+Title_9.TextColor3 = Color3.fromRGB(155, 155, 155)
+Title_9.TextSize = 12.000
+Title_9.TextXAlignment = Enum.TextXAlignment.Left
 
 return DoggosHub
