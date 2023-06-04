@@ -57,6 +57,7 @@ local Toggle = Templates.Toggle.ToggleTemplate
 local Section = Templates.Section.SectionHolder
 local Keybind = Templates.Keybind.Title
 local Slider = Templates.Slider.SliderTemplate
+local TextBox = Templates.TextBox.Title
 local Clock
 local TabsHolder = Background.Headers.Tabs.Frames.TabsHolder
 local TabsButtonHolder = Background.Headers.Tabs.Buttons.ButtonsHolder
@@ -464,6 +465,32 @@ function module:AddTab(name)
 			newSlider.Title.Text = '  ' .. newText
 		end
 		return Slider
+	end
+	function Elements:AddTextBox(config)
+		local actions = {}
+		config.Callback = config.Callback or function() end
+		config.Text = config.Text or tostring(math.random(1000, 9000)) .. 'error'
+		config.DeleteText = config.DeleteText or false
+		config.HolderText = config.HolderText or tostring(math.random(1000, 9000)) .. 'error'
+		local newTextBox = TextBox:Clone()
+		newTextBox.Name = name
+		newTextBox.Parent = TabsHolder
+		newTextbox.Text = '  ' .. config.Text
+		newTextBox.TextHolder.TextEnter.FocusLost:Connect(function()
+			pcall(config.Callback, newTextBox.TextHolder.TextEnter.Text)
+			if (config.DeleteText == true) then
+				newTextBox.TextHolder.TextEnter.Text = ''
+			end
+		end)
+		function actions:Set(newText)
+			newText = newText or tostring(math.random(1000, 9000)) .. 'error'
+			newTextBox.TextHolder.TextEnter.Text = '  ' .. newText
+		end
+		function actions:NewText(newText)
+			newText = newText or tostring(math.random(1000, 9000)) .. 'error'
+			newTextBox.Text = '  ' .. newText
+		end
+		return actions
 	end
 	function Elements:AddClock(config)
 		local actions = {}
