@@ -5,7 +5,7 @@ end
 local Lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/meandmystupidity/robloxgamefunctions/main/lib.lua')))()
 local dragging = false
 local dragInput, mousePos, framePos
-Lib.Background.InputBegan:Connect(function(input)
+Lib.Background.Drag.InputBegan:Connect(function(input)
 if input.UserInputType == Enum.UserInputType.MouseButton1 then
     dragging = true
     mousePos = input.Position
@@ -34,7 +34,6 @@ end)
 local Background = Lib.Background
 Background.Visible = true
 Background.Active = true
-Background.Draggable = true
 local Templates = Background.Templates
 local Dropdown = Templates.Dropdown.Title
 local Button = Templates.Button.ButtonTemplate
